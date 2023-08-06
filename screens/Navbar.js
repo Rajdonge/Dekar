@@ -45,8 +45,7 @@ const Navbar = ({isLoggedIn, setIsLoggedIn}) => {
           onPress={()=> navigation.navigate("Cart")}>
             MY CART
           </Text>
-          <Text style={styles.menuItems}
-          onPress={()=> navigation.navigate("Orders")}>
+          <Text style={styles.menuItems}>
             MY ORDERS
           </Text>
           <Text
@@ -63,9 +62,9 @@ const Navbar = ({isLoggedIn, setIsLoggedIn}) => {
           </Text>
           <Text
             style={styles.menuItems}
-            onPress={()=>navigation.navigate("BodyCare")}
+            onPress={()=>navigation.navigate("SkinCare")}
           >
-            BODY CARE
+            SKIN CARE
           </Text>
           <Text
             style={styles.menuItems}

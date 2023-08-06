@@ -1,7 +1,7 @@
 import { StyleSheet, Text, View, Image, ScrollView,TextInput, TouchableOpacity, Alert } from "react-native";
 import React, { useEffect, useState } from "react";
 import { useNavigation } from "@react-navigation/native";
-import Orders from "./Orders";
+
 
 const CheckBox = ({checked, onChange}) => {
   return(

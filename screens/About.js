@@ -1,5 +1,6 @@
 import { StyleSheet, Text, View, ScrollView } from "react-native";
 import React from "react";
+import Footer from "./Footer";
 
 const About = () => {
   return (
@@ -21,6 +22,7 @@ const About = () => {
         requirements so thereby, provides high quality personal care products at
         the best price.
       </Text>
+      <Footer />
     </ScrollView>
   );
 };

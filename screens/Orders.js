@@ -2,6 +2,7 @@
 
 import React from "react";
 import { View, Text, FlatList } from "react-native";
+import Footer from "./Footer";
 
 const Orders = ({ route }) => {
   const { selectedItems, cart } = route.params;
@@ -15,23 +16,23 @@ const Orders = ({ route }) => {
   };
 
   return (
-    <View>
-      <Text>Ordered Items:</Text>
+    <View style={{justifyContent: 'center', alignItems: 'center'}}>
+      <Text style={{textAlign: 'center', fontWeight: 'bold', fontSize: 30}}>Ordered Items:</Text>
       <FlatList
         data={selectedItems}
         keyExtractor={(itemIndex) => itemIndex.toString()}
         renderItem={({ item }) => {
           const selectedItem = cart[item];
           return (
-            <View>
-              <Text>{selectedItem.name}</Text>
+            <View style={{padding: 20}}>
+              <Text style={{fontWeight: 'bold'}}>{selectedItem.name}</Text>
               <Text>Rs. {selectedItem.price}</Text>
               <Text>Qty {selectedItem.quantity}</Text>
             </View>
           );
         }}
       />
-      <Text>Total Price: Rs. {calculateTotalPrice()}</Text>
+      <Text style={{fontWeight: 'bold', fontSize: 20}}>Total Price: Rs. {calculateTotalPrice()}</Text>
     </View>
   );
 };

@@ -1,6 +1,7 @@
 import { StyleSheet, Text, View, ScrollView } from "react-native";
 import React from "react";
 import { Ionicons, FontAwesome5, MaterialIcons, EvilIcons } from "@expo/vector-icons";
+import Footer from "./Footer";
 
 const ContactUs = () => {
   return (
@@ -26,6 +27,7 @@ const ContactUs = () => {
           9855054497 <EvilIcons name="sc-facebook" size={20} color="white" />
         </Text>
       </View>
+      <Footer />
     </ScrollView>
   );
 };
