@@ -5,26 +5,26 @@ import { createStackNavigator } from "@react-navigation/stack";
 import { Alert } from "react-native";
 
 
-import HomeScreen from "./screens/HomeScreen";
-import About from "./screens/About";
-import ContactUs from "./screens/ContactUs";
-import Navbar from "./screens/Navbar";
-import Footer from "./screens/Footer";
-import OtherProducts from "./screens/OtherProducts";
-import Login from "./screens/Login";
-import users from './data/UsersData';
-import Carts from "./screens/Carts";
-import Orders from "./screens/Orders";
+import HomeScreen from "./components/screens/HomeScreen";
+import About from "./components/screens/About";
+import ContactUs from "./components/screens/ContactUs";
+import Navbar from "./components/screens/Navbar";
+import Footer from "./components/screens/Footer";
+import OtherProducts from "./components/screens/OtherProducts";
+import Login from "./components/screens/Login";
+import users from './components/data/UsersData';
+import Carts from "./components/screens/Carts";
+import Orders from "./components/screens/Orders";
 
-import face_products from "./components/products/FaceCare";
-import hair_products from "./components/products/HairCare";
-import skin_products from "./components/products/SkinCare";
+import face_products from "./components/data/products/FaceCare";
+import hair_products from "./components/data/products/HairCare";
+import skin_products from "./components/data/products/SkinCare";
+import new_products from "./components/data/products/NewProducts";
 
-import FaceCareScreen from "./screens/FaceCareScreen";
-import HairCareScreen from "./screens/HairCareScreen";
-import SkinCareScreen from "./screens/SkinCareScreen";
-import NewProductsScreen from "./screens/NewProductsScreen";
-import new_products from "./components/products/NewProducts";
+import FaceCareScreen from "./components/screens/FaceCareScreen";
+import HairCareScreen from "./components/screens/HairCareScreen";
+import SkinCareScreen from "./components/screens/SkinCareScreen";
+import NewProductsScreen from "./components/screens/NewProductsScreen";
 
 const Stack = createStackNavigator();
 

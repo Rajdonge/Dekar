@@ -7,7 +7,7 @@ import {
   TouchableOpacity,
 } from "react-native";
 import React from "react";
-import face_products from "../components/products/FaceCare";
+import face_products from "../data/products/FaceCare";
 import Footer from "./Footer";
 
 

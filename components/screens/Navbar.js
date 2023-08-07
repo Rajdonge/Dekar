@@ -1,6 +1,6 @@
 import { StyleSheet, Text, View, Image} from "react-native";
 import { Ionicons, FontAwesome5, MaterialIcons, EvilIcons } from "@expo/vector-icons";
-import logo from "../assets/logo.png";
+import logo from "../../assets/logo.png";
 import Modal from "react-native-modal";
 import { useState } from "react";
 import { Entypo } from "@expo/vector-icons";
@@ -74,9 +74,9 @@ const Navbar = ({isLoggedIn, setIsLoggedIn}) => {
           </Text>
           <Text
             style={styles.menuItems}
-            onPress={()=>navigation.navigate("OtherProducts")}
+            onPress={()=>navigation.navigate("NewProducts")}
           >
-            OTHER PRODUCTS
+            NEW PRODUCTS
           </Text>
           <Text
             style={styles.menuItems}

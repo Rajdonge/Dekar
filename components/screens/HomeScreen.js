@@ -21,9 +21,10 @@ const windowHeight = Dimensions.get("window").height;
 
 const HomeScreen = ({ handleCartBtn }) => {
   const images = [
-    require("../assets/Neem.png"),
-    require("../assets/bn1.png"),
-    require("../assets/bn2.jpg"),
+    require("../../assets/Neem.png"),
+    require("../../assets/bn1.png"),
+    require("../../assets/bn2.jpg"),
+    require("../../assets/Azclear-Ego-banner-desktop.jpg")
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -65,7 +66,7 @@ const HomeScreen = ({ handleCartBtn }) => {
         <View style={styles.dekar_detail}>
           <View style={styles.dekar}>
             <Image
-              source={require("../assets/logo/mapLocator.png")}
+              source={require("../../assets/logo/mapLocator.png")}
               style={styles.logo}
             />
             <Text style={styles.dekar_detail_text}> Address </Text>
@@ -75,7 +76,7 @@ const HomeScreen = ({ handleCartBtn }) => {
           </View>
           <View style={styles.dekar}>
             <Image
-              source={require("../assets/logo/phone.png")}
+              source={require("../../assets/logo/phone.png")}
               style={styles.logo}
             />
             <Text style={styles.dekar_detail_text}> Phone </Text>
@@ -83,7 +84,7 @@ const HomeScreen = ({ handleCartBtn }) => {
           </View>
           <View style={styles.dekar}>
             <Image
-              source={require("../assets/logo/mail.png")}
+              source={require("../../assets/logo/mail.png")}
               style={styles.logo}
             />
             <Text style={styles.dekar_detail_text}> Email </Text>

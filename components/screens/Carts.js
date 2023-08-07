@@ -30,7 +30,7 @@ const Carts = ({ cart, setCart, isLoggedIn }) => {
   const handleCheckout = () => {
     if (! isLoggedIn){
       navigation.navigate("Login");
-      Alert.alert("Please login to your account to Check out")
+      Alert.alert("Please login to your account to proceed Check out operation")
       return;
     }else if(selectedItems.length > 0){
       const updatedCart = cart.filter((item, index) => !selectedItems.includes(index));

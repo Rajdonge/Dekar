@@ -9,27 +9,27 @@ import {
     Dimensions
   } from "react-native";
   import React from "react";
-  import skin_products from "../components/products/SkinCare";
+  import new_products from "../data/products/NewProducts";
   
-  const SkinCareScreen = ({ handleCartBtn }) => {
+  const NewProductsScreen = ({ handleCartBtn }) => {
     return (
       <ScrollView>
-        <ImageBackground style={styles.skin_banner}>
-          <Image source={require('../assets/newImages/smallbanner.jpg')}
-          style={styles.skin_banner_image}
+        <ImageBackground style={styles.new_products_banner}>
+          <Image source={require('../../assets/newImages/smallbanner.jpg')}
+          style={styles.new_products_banner_image}
           resizeMode = 'cover'
           />
-          <View style={styles.skinBannerContent}>
-              <Text style={{fontSize:16 ,color:'orange', fontWeight: 'bold'}}>Skin Products</Text>
-              <Text style={styles.skinBannerText}>Explore Our Skin Care Products</Text>
-              <TouchableOpacity style={styles.skinBannerButton}>
-                <Text style={styles.skinBannerButtonText}>Shop Now</Text>
+          <View style={styles.newProductsBannerContent}>
+              <Text style={{fontSize:16 ,color:'orange', fontWeight: 'bold'}}>New Products</Text>
+              <Text style={styles.newProductsBannerText}>Explore Our New Products</Text>
+              <TouchableOpacity style={styles.newProductsBannerButton}>
+                <Text style={styles.newProductsBannerButtonText}>Shop Now</Text>
               </TouchableOpacity>
             </View>
         </ImageBackground>
-        <Text style={styles.title}>Skin Care Products</Text>
+        <Text style={styles.title}>New Products</Text>
         <ScrollView horizontal>
-          {skin_products.map((item, index) => (
+          {new_products.map((item, index) => (
             <View style={styles.container} key={index}>
               <View style={styles.imageContainer}>
                 <View style={styles.imageItemContainer}>
@@ -52,7 +52,7 @@ import {
     );
   };
   
-  export default SkinCareScreen;
+  export default NewProductsScreen;
   
   const styles = StyleSheet.create({
     title: {
@@ -62,41 +62,41 @@ import {
       marginTop: 30,
       textAlign: 'center'
     },
-    skin_banner_image: {
+    new_products_banner_image: {
       width: Dimensions.get('window').width,
       height: 250,
       marginTop: 10
     },
-    skin_banner: {
+    new_products_banner: {
       width: '100%',
       position: 'relative',
     },
-    skin_banner_image: {
+    new_products_banner_image: {
       width: Dimensions.get('window').width,
       height: 200,
       marginTop: 10,
     },
-    skinBannerContent: {
+    newProductsBannerContent: {
       position: 'absolute', 
       left: 28, 
       right: 30, 
       top: 50,
       alignItems: 'center',
     },
-    skinBannerText: {
+    newProductsBannerText: {
       fontSize: 28,
       fontWeight: 'bold',
       marginBottom: 10,
       color: '#fff'
       
     },
-    skinBannerButton: {
+    newProductsBannerButton: {
       backgroundColor: '#fff',
       paddingVertical: 10,
       paddingHorizontal: 20,
       borderRadius: 5,
     },
-    skinBannerButtonText: {
+    newProductsBannerButtonText: {
       fontSize: 18,
       fontWeight: 'bold',
       color: '#000',

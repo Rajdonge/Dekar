@@ -9,13 +9,13 @@ import {
   Dimensions
 } from "react-native";
 import React from "react";
-import hair_products from "../components/products/HairCare";
+import hair_products from "../data/products/HairCare";
 
 const HairCareScreen = ({ handleCartBtn }) => {
   return (
     <ScrollView>
       <ImageBackground style={styles.hair_banner}>
-        <Image source={require('../assets/newImages/hairBanner.jpg')}
+        <Image source={require('../../assets/newImages/hairBanner.jpg')}
         style={styles.hair_banner_image}
         resizeMode = 'cover'
         />
