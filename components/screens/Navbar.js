@@ -1,27 +1,33 @@
-import { StyleSheet, Text, View, Image} from "react-native";
-import { Ionicons, FontAwesome5, MaterialIcons, EvilIcons } from "@expo/vector-icons";
+import { StyleSheet, Text, View, Image } from "react-native";
+import {
+  Ionicons,
+  FontAwesome5,
+  MaterialIcons,
+  EvilIcons,
+} from "@expo/vector-icons";
 import logo from "../../assets/logo.png";
 import Modal from "react-native-modal";
 import { useState } from "react";
 import { Entypo } from "@expo/vector-icons";
 import { useNavigation } from "@react-navigation/native";
 
-const Navbar = ({isLoggedIn, setIsLoggedIn}) => {
-
+const Navbar = ({ isLoggedIn, setIsLoggedIn }) => {
+  const closeModal = () => {
+    setVisible(false);
+  };
 
   const [visible, setVisible] = useState(false);
-  
-  const navigation = useNavigation();
 
+  const navigation = useNavigation();
 
   return (
     <>
-      <Modal style={styles.modal}
+      <Modal
+        style={styles.modal}
         animationIn={"slideInLeft"}
         animationOut={"slideOutLeft"}
-        
         isVisible={visible}
-        onBackdropPress={()=> setVisible(false)}
+        onBackdropPress={() => setVisible(false)}
       >
         <View style={styles.menuContainer}>
           <View style={styles.logoContainer}>
@@ -36,73 +42,107 @@ const Navbar = ({isLoggedIn, setIsLoggedIn}) => {
           </View>
           <Text
             style={styles.menuItems}
-            onPress={()=>navigation.navigate("Home")} 
+            onPress={() => {
+              navigation.navigate("Home");
+              closeModal();
+            }}
           >
             HOME
           </Text>
-          <Text 
-          style={styles.menuItems}
-          onPress={()=> navigation.navigate("Cart")}>
+          <Text
+            style={styles.menuItems}
+            onPress={() => {
+              navigation.navigate("Cart");
+              closeModal();
+            }}
+          >
             MY CART
           </Text>
-          <Text style={styles.menuItems}>
+          <Text
+            style={styles.menuItems}
+            onPress={() => {
+              navigation.navigate("Home");
+              closeModal();
+            }}
+          >
             MY ORDERS
           </Text>
           <Text
             style={styles.menuItems}
-            onPress={()=>navigation.navigate("About")}
+            onPress={() => {
+              navigation.navigate("About");
+              closeModal();
+            }}
           >
             ABOUT US
           </Text>
           <Text
             style={styles.menuItems}
-            onPress={()=>navigation.navigate("FaceCare")}
+            onPress={() => {
+              navigation.navigate("FaceCare");
+              closeModal();
+            }}
           >
             FACE CARE
           </Text>
           <Text
             style={styles.menuItems}
-            onPress={()=>navigation.navigate("SkinCare")}
+            onPress={() => {
+              navigation.navigate("SkinCare");
+              closeModal();
+            }}
           >
             SKIN CARE
           </Text>
           <Text
             style={styles.menuItems}
-            onPress={()=>navigation.navigate("HairCare")}
+            onPress={() => {
+              navigation.navigate("HairCare");
+              closeModal();
+            }}
           >
             HAIR CARE
           </Text>
           <Text
             style={styles.menuItems}
-            onPress={()=>navigation.navigate("NewProducts")}
+            onPress={() => {
+              navigation.navigate("NewProducts");
+              closeModal();
+            }}
           >
             NEW PRODUCTS
           </Text>
           <Text
             style={styles.menuItems}
-            onPress={()=>navigation.navigate("ContactUs")}
+            onPress={() => {
+              navigation.navigate("ContactUs");
+              closeModal();
+            }}
           >
             CONTACT US
           </Text>
 
-            {
-              isLoggedIn ? (
-          <Text
-          style={styles.menuItems}
-            onPress={()=>setIsLoggedIn(false)}
-          >
-            LOGOUT
-          </Text>
-              ) : (
-                <Text
-                style={styles.menuItems}
-            onPress={()=>navigation.navigate("Login")}
-          >
-            LOGIN
-          </Text>
-              )
-            }
-
+          {isLoggedIn ? (
+            <Text
+              style={styles.menuItems}
+              onPress={() => {
+                setIsLoggedIn(false);
+                closeModal();
+              }}
+            >
+              LOGOUT
+            </Text>
+          ) : (
+            <Text
+              style={styles.menuItems}
+              onPress={() => {
+                navigation.navigate("Login");
+                closeModal();
+              }}
+            >
+              LOGIN
+            </Text>
+          )}
         </View>
       </Modal>
 
@@ -157,32 +197,32 @@ const styles = StyleSheet.create({
     backgroundColor: "white",
   },
   container: {
-    flex: .6,
-    justifyContent: 'center',
-    alignItems: 'center',
+    flex: 0.6,
+    justifyContent: "center",
+    alignItems: "center",
     backgroundColor: "#0A0A13",
   },
   menuContainer: {
     paddingLeft: 20,
   },
   logoContainer: {
-    flexDirection: 'row',
-    alignItems: 'center',
+    flexDirection: "row",
+    alignItems: "center",
     marginTop: 30,
-    marginBottom: 40
+    marginBottom: 40,
   },
   logo: {
-    width: 120, 
+    width: 120,
     height: 50,
   },
   exitSymbol: {
-    marginLeft: 80
+    marginLeft: 80,
   },
-menuItems: {
-  paddingTop: 30
-},
+  menuItems: {
+    paddingTop: 30,
+  },
   text: {
-    color: 'white',
-    paddingBottom: 10
-  }
+    color: "white",
+    paddingBottom: 10,
+  },
 });
